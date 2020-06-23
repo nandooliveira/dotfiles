@@ -138,3 +138,6 @@ let g:ale_fixers = { 'javascript': ['prettier'], 'ruby': ['rubocop', 'rufo'] }
 
 vnoremap <silent> <F6> :Tabularize/\(:.*\)\@<!:\zs /l0<CR>
 nnoremap <silent> <F8> :FZF<CR>
+
+" enable mouse
+set mouse=a
