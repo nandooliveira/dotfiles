@@ -142,4 +142,6 @@ nnoremap <silent> <F8> :FZF<CR>
 " enable mouse
 set mouse=a
 
-g:yadr_disable_solarized_enhancements true
+let g:yadr_disable_solarized_enhancements = 0
+
+command Bd bp\|bd \#
