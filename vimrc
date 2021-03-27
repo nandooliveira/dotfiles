@@ -119,3 +119,28 @@ set nomodeline
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+
+" run ALELint
+nnoremap <silent> <leader>al :ALELint<CR>
+nnoremap <silent> <leader>alf :ALEFix<CR>
+nnoremap <silent> <leader>rb :RuboCop %@<CR>
+nnoremap <silent> <leader>rbf :RuboCop -a %@<CR>
+
+let g:ale_cache_executable_check_failures = 1
+let g:ale_lint_on_text_changed = 'never'
+" You can disable this option too
+" if you don't want linters to run on opening a file
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 0
+" let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+let g:ale_fixers = { 'javascript': ['prettier'], 'ruby': ['rubocop', 'rufo'] }
+
+vnoremap <silent> <F6> :Tabularize/\(:.*\)\@<!:\zs /l0<CR>
+nnoremap <silent> <F8> :FZF<CR>
+
+set mouse=a
+
+" g:yadr_disable_solarized_enhancements true
+let g:yadr_disable_solarized_enhancements = 1
+
+command Bd bp\|bd \#
